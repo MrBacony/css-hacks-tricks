@@ -1,0 +1,21 @@
+export const tricks: any[] = [
+    {label: 'Center elements', stackblitz: 'https://stackblitz.com/edit/center-element?embed=1&file=styles.css&hideNavigation=1&theme=light'},
+    {label: 'box-sizing', stackblitz: 'https://stackblitz.com/edit/border-box-sizing?embed=1&file=index.html&hideNavigation=1&theme=light'},
+    {label: 'Outline text', stackblitz: 'https://stackblitz.com/edit/outline-text?embed=1&file=index.html&hideNavigation=1&theme=light', caniuse: 'https://caniuse.com/text-stroke'},
+    {label: 'Primitive shapes without SVG', stackblitz: 'https://stackblitz.com/edit/primitive-shapes?embed=1&file=styles.css&hideNavigation=1&theme=light'},
+    {label: 'CSS image processing', stackblitz: 'https://stackblitz.com/edit/image-processing-bean?embed=1&file=styles.css&hideNavigation=1&theme=light', caniuse: 'https://caniuse.com/css-filters'},
+    {label: 'Scaling of grouped content', stackblitz: 'https://stackblitz.com/edit/group-scaling?embed=1&file=styles.css&hideNavigation=1&theme=light'},
+    {label: 'State transitions', stackblitz: 'https://stackblitz.com/edit/state-transitions?embed=1&file=src/app/app.component.css&hideNavigation=1&theme=light'},
+    {label: ':not()', stackblitz: 'https://stackblitz.com/edit/css-not?embed=1&file=styles.css&hideNavigation=1&theme=light'},
+    {label: '@supports', stackblitz: 'https://stackblitz.com/edit/css-supports?embed=1&file=styles.css&hideNavigation=1', caniuse: 'https://caniuse.com/css-supports-api'},
+    {label: 'Ellipsis...', stackblitz: 'https://stackblitz.com/edit/ellipsis-css?embed=1&file=styles.css&hideNavigation=1&theme=light', caniuse: 'https://caniuse.com/css-line-clamp'},
+    {label: ':target', stackblitz: 'https://stackblitz.com/edit/target-css?embed=1&file=index.html&hideNavigation=1&theme=light'},
+    {label: 'Forms and Labels'},
+
+    {label: 'Media Queries'},
+    {label: ':disabled'},
+    {label: 'Units (em, rem, ch, px...)'},
+    {label: 'min(), max(), clamp()'},
+    {label: 'calc()'},
+    {label: 'Viewport dependent units'},
+];
