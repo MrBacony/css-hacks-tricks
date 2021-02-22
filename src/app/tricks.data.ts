@@ -1,5 +1,7 @@
 export const tricks: any[] = [
     {label: 'Center elements', stackblitz: 'https://stackblitz.com/edit/center-element?embed=1&file=styles.css&hideNavigation=1&theme=light'},
+    {label: 'Flex The Box', stackblitz: ''},
+    {label: 'Even and Odd', stackblitz: ''},
     {label: 'box-sizing', stackblitz: 'https://stackblitz.com/edit/border-box-sizing?embed=1&file=index.html&hideNavigation=1&theme=light'},
     {label: 'Outline text', stackblitz: 'https://stackblitz.com/edit/outline-text?embed=1&file=index.html&hideNavigation=1&theme=light', caniuse: 'https://caniuse.com/text-stroke'},
     {label: 'Primitive shapes without SVG', stackblitz: 'https://stackblitz.com/edit/primitive-shapes?embed=1&file=styles.css&hideNavigation=1&theme=light'},
@@ -10,12 +12,14 @@ export const tricks: any[] = [
     {label: '@supports', stackblitz: 'https://stackblitz.com/edit/css-supports?embed=1&file=styles.css&hideNavigation=1', caniuse: 'https://caniuse.com/css-supports-api'},
     {label: 'Ellipsis...', stackblitz: 'https://stackblitz.com/edit/ellipsis-css?embed=1&file=styles.css&hideNavigation=1&theme=light', caniuse: 'https://caniuse.com/css-line-clamp'},
     {label: ':target', stackblitz: 'https://stackblitz.com/edit/target-css?embed=1&file=index.html&hideNavigation=1&theme=light'},
+    {label: 'Data in your CSS'},
     {label: 'Forms and Labels'},
-
     {label: 'Media Queries'},
-    {label: ':disabled'},
+    // {label: ':disabled'},
     {label: 'Units (em, rem, ch, px...)'},
     {label: 'min(), max(), clamp()'},
     {label: 'calc()'},
-    {label: 'Viewport dependent units'},
+    {label: 'underlined? overrated!'},
+    // {label: 'Nonsense with Tables'},
+    {label: 'Viewport dependent units', stackblitz: 'https://stackblitz.com/edit/viewport-dependent-units?embed=1&file=styles.css&hideNavigation=1'},
 ];

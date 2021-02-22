@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  width: 430px;
+  height: 575px;
+  position: absolute;
+
+  &.front {
+    left: 50%;
+    bottom: 60px;
+    margin-left: -700px;
+  }
+
+  img {
+    width: 175%;
+  }
+}
