@@ -1,7 +1,37 @@
-img {
+:host {
+  overflow: hidden;
+  height: 100vh;
+  display: block;
+  position: relative;
+}
+
+.sun {
+  width: 20vh;
+  height: 20vh;
+  background: #E4D288;
+  border-radius: 20vh;
+  box-shadow: 0 0 100px 0 rgba(245,207,116, 0.54);
+  position: absolute;
+  right: 5%;
+  top: 4%;
+}
+
+.saturn {
+  width: 20vh;
+  height: 20vh;
+  position: absolute;
+  left: 7%;
+  top: 14%;
+
+  & > img {
+    height: 25vh;
+  }
+}
+
+.planet-content > img {
   width: 2090px;
   position: absolute;
   margin-left: 50%;
-  transform: translate(-46%, 0);
-  bottom: -1651px;
+  transform: translate(-46%, 1650px);
+  bottom: 0;
 }
