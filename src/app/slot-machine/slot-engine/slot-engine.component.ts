@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {EngineState, Trick} from '../../app.model';
-import set = Reflect.set;
+
 
 @Component({
   selector: 'app-slot-engine',
@@ -14,7 +14,7 @@ export class SlotEngineComponent implements OnInit {
 
   @Input()
   set start(input: EngineState) {
-    if(input) {
+    if (input) {
       this.state = input;
 
       this.generateRandomList();
@@ -29,7 +29,12 @@ export class SlotEngineComponent implements OnInit {
   wonTricks: Trick[] = [];
 
   slotWinner: Trick;
-  constructor() { }
+
+  @Output()
+  win: EventEmitter<Trick[]> = new EventEmitter<Trick[]>();
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
@@ -37,25 +42,30 @@ export class SlotEngineComponent implements OnInit {
   generateRandomList() {
     this.preparedList = [];
     let wonIndex;
-    for(let i=0; i < 50; i++) {
+    for (let i = 0; i < 50; i++) {
       const index = Math.floor(Math.random() * this.slotcontents.length);
       this.preparedList.push(this.slotcontents[index]);
-      if(i === 2) {
+      if (i === 2) {
         wonIndex = index;
       }
     }
     this.slotcontents.splice(wonIndex, 1);
     this.slotWinner = this.preparedList[2];
     this.wonTricks.push(this.slotWinner);
+    this.slotWinner.wonIndex = this.wonTricks.lastIndexOf(this.slotWinner);
   }
 
   startEngine() {
-    if((this.state === EngineState.FINISHED || this.state === EngineState.START) && this.slotcontents.length > 0) {
+    if ((this.state === EngineState.FINISHED || this.state === EngineState.START) && this.slotcontents.length > 0) {
+      this.state = EngineState.RESET;
+      setTimeout(() => {
         this.state = EngineState.RUNNING;
         this.generateRandomList();
         setTimeout(() => {
           this.state = EngineState.FINISHED;
+          this.win.emit([...this.wonTricks]);
         }, 2500);
+      }, 50);
     }
   }
 

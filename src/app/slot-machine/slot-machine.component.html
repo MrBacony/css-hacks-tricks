@@ -1,4 +1,4 @@
 <img src="assets/svg/slot-machine.svg">
 
 
-<app-slot-engine [slotcontents]="tricks" [start]="engineState"></app-slot-engine>
+<app-slot-engine (win)="engineFinished($event)" [slotcontents]="tricks" [start]="engineState"></app-slot-engine>

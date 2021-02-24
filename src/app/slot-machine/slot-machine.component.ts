@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {EngineState, Trick} from '../app.model';
 import {tricks} from '../tricks.data';
 
@@ -13,6 +13,9 @@ export class SlotMachineComponent implements OnInit {
 
   engineState: EngineState;
 
+  @Output()
+  newTricks: EventEmitter<Trick[]> = new EventEmitter<Trick[]>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -24,5 +27,9 @@ export class SlotMachineComponent implements OnInit {
     }
 
     this.engineState = EngineState.START;
+  }
+
+  engineFinished(tricks: Trick[]) {
+    this.newTricks.emit(tricks);
   }
 }

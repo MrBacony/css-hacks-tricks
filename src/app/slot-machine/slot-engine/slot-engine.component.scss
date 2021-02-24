@@ -86,7 +86,8 @@
     transform: translateY(calc(calc(-60px * 1) + 10px));
   }
 
-  &.finished {
+  &.reset {
+    transition: none;
     transform: translateY(calc(-60px * 50));
     opacity: 0;
   }

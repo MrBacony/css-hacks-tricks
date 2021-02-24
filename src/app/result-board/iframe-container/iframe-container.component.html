@@ -1,0 +1,5 @@
+<div>
+  <div class="backdrop" (click)="closeIframe()"></div>
+  <iframe [src]="getTrustedUrl()"></iframe>
+  <div (click)="closeIframe()"><img src="assets/svg/close.svg"></div>
+</div>

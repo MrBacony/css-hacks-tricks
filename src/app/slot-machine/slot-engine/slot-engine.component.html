@@ -1,14 +1,14 @@
 <div class="slot-engine">
   <div class="slot-window">
     <div class="slot-container"
-         [ngClass]="{start: state === 'START', running: state === 'RUNNING', finished: state === 'FINISHED'}">
+         [ngClass]="{start: state === 'START', running: state === 'RUNNING' ||state === 'FINISHED', reset: state === 'RESET'}">
       <div class="slot-item" *ngFor="let item of preparedList">
         {{item.label}}
       </div>
     </div>
-    <div class="slot-winner slot-item" [ngClass]="{shown: state === 'FINISHED'}" *ngIf="slotWinner && state === 'FINISHED'">
+    <!--div class="slot-winner slot-item" [ngClass]="{shown: state === 'FINISHED'}" *ngIf="slotWinner && state === 'FINISHED'">
       {{slotWinner.label}}
-    </div>
+    </--div-->
     <div class="win-area"></div>
   </div>
   <button (click)="startEngine()" [ngClass]="{wait: state === 'RUNNING'}"><span>PUSH</span></button>

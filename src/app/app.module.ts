@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SlotMachineComponent } from './slot-machine/slot-machine.component';
 import { SlotEngineComponent } from './slot-machine/slot-engine/slot-engine.component';
+import { ResultBoardComponent } from './result-board/result-board.component';
+import { IframeContainerComponent } from './result-board/iframe-container/iframe-container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SlotMachineComponent,
-    SlotEngineComponent
+    SlotEngineComponent,
+    ResultBoardComponent,
+    IframeContainerComponent
   ],
   imports: [
     BrowserModule,

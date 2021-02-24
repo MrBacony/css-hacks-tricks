@@ -1,9 +1,14 @@
-<div class="sun"></div>
-<div class="saturn">
-  <img src="assets/svg/saturn.svg">
+<div class="space">
+  <div id='stars1'></div>
+  <div id='stars2'></div>
+  <div id='stars3'></div>
+  <div class="sun"></div>
+  <div class="saturn">
+    <img src="assets/svg/saturn.svg">
+  </div>
+  <app-result-board [tricks]="trickList"></app-result-board>
+  <div class="planet-content">
+    <img src="assets/svg/moon.svg">
+    <app-slot-machine (newTricks)="addTricks($event)" class="front" ></app-slot-machine>
+  </div>
 </div>
-<div class="planet-content">
-  <img src="assets/svg/moon.svg">
-  <app-slot-machine class="front"></app-slot-machine>
-</div>
-
