@@ -80,16 +80,49 @@
 
 .planet-content {
   position: absolute;
-  bottom: 0;
-  height: 50vh;
+  bottom: -50vh;
+  height: 100vh;
+  width: 100vw;
   z-index: 10;
+  transform: scale(0.01) translate(-1500px, -2400px);
+
+  animation-delay: 21s;
+  animation-name: planet;
+  animation-timing-function: ease-in-out;
+  animation-duration: 5s;
+
+  animation-fill-mode: forwards;
 
   & > img {
-    width: 2090px;
+    width: 100vw;
     /* position: absolute; */
     /* margin-left: 50%; */
     /* left: 50%; */
-    transform: translate(-140px, 50px);
-    bottom: 0;
+    transform: translate(0, 50px);
+  }
+}
+
+
+
+.black {
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  background: black;
+}
+
+
+@keyframes planet {
+  0% {
+    transform: scale(0.01) translate(-1500px, -2400px);
+  }
+
+
+  100% {
+    transform: scale(1) translate(0px, 0px);
   }
 }

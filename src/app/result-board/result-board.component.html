@@ -1,4 +1,4 @@
-<div class="trick-list-container">
+<div class="trick-list-container" [ngClass]="{show: tricks.length > 0}">
 <div class="trick-list">
   <div *ngFor="let trick of tricks; let i = index" class="trick">
     <div class="number">{{trick.wonIndex + 1}}</div>

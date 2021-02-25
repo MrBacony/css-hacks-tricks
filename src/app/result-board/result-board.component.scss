@@ -13,6 +13,12 @@
   ) rotateZ(
       7deg
   );
+
+  display: none;
+
+  &.show {
+    display: block;
+  }
 }
 
 .trick-list {

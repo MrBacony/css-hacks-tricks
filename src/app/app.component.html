@@ -7,8 +7,15 @@
     <img src="assets/svg/saturn.svg">
   </div>
   <app-result-board [tricks]="trickList"></app-result-board>
-  <div class="planet-content">
+  <div *ngIf="dialog === 'DIALOG' || dialog === 'LOGO'  || dialog === 'SLOTMACHINE'" class="planet-content">
     <img src="assets/svg/moon.svg">
     <app-slot-machine (newTricks)="addTricks($event)" class="front" ></app-slot-machine>
   </div>
+
+
+
+
+  <app-logo *ngIf="dialog === 'DIALOG' || dialog === 'LOGO'"></app-logo>
+  <app-start-dialog *ngIf="dialog === 'DIALOG'"></app-start-dialog>
+  <div class="black" *ngIf="dialog === 'START'" (click)="clickStart()"></div>
 </div>
