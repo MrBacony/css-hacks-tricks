@@ -8,8 +8,10 @@
   </div>
   <app-result-board [tricks]="trickList"></app-result-board>
   <div *ngIf="dialog === 'DIALOG' || dialog === 'LOGO'  || dialog === 'SLOTMACHINE'" class="planet-content">
-    <img src="assets/svg/moon.svg">
-    <app-slot-machine (newTricks)="addTricks($event)" class="front" ></app-slot-machine>
+    <div class="moon">
+      <img src="assets/svg/moon.svg">
+      <app-slot-machine (newTricks)="addTricks($event)" class="front" ></app-slot-machine>
+    </div>
   </div>
 
 

@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Retro Computer';
+  src: url('assets/fonts/retro_computer_personal_use.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
 html, body {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   padding: 0;

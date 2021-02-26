@@ -84,21 +84,35 @@
   height: 100vh;
   width: 100vw;
   z-index: 10;
-  transform: scale(0.01) translate(-1500px, -2400px);
+  transform: translate(-320px, -200px);
 
   animation-delay: 21s;
   animation-name: planet;
   animation-timing-function: ease-in-out;
   animation-duration: 5s;
 
+  transform-origin: center 50vh;
   animation-fill-mode: forwards;
 
+
+
+  .moon {
+    transform: scale(0.01);
+    transform-origin: top center;
+    animation-delay: 21s;
+    animation-name: moon;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+
+
   & > img {
-    width: 100vw;
-    /* position: absolute; */
-    /* margin-left: 50%; */
-    /* left: 50%; */
-    transform: translate(0, 50px);
+      width: 100vw;
+      /* position: absolute; */
+      /* margin-left: 50%; */
+      /* left: 50%; */
+      transform: translate(0, 50px);
+    }
   }
 }
 
@@ -118,11 +132,24 @@
 
 @keyframes planet {
   0% {
-    transform: scale(0.01) translate(-1500px, -2400px);
+    transform: translate(-320px, -200px);
+  }
+
+  50% {
+    transform: translate(120px, -100px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes moon {
+  0% {
+    transform: scale(0.01);
   }
 
 
   100% {
-    transform: scale(1) translate(0px, 0px);
+    transform: scale(1);
   }
 }

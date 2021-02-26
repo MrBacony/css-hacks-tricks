@@ -6,10 +6,10 @@
   right: 0;
 
   z-index: 100;
-  animation-delay: 21s;
+  animation-delay: 19s;
   animation-name: zoom;
   animation-timing-function: linear;
-  animation-duration: 5s;
+  animation-duration: 2s;
 
   animation-fill-mode: forwards;
 
@@ -26,10 +26,10 @@
 
     img.sign {
       position: absolute;
-      bottom: -120px;
+      bottom: -60px;
       right: 60px;
 
-      width: 20vw;
+      width: 35vw;
       transform: translate(35%, 150%);
     }
   }
@@ -39,16 +39,10 @@
 
 @keyframes zoom {
   0% {
-    transform: scale(1) translate(0px, 0px);
     opacity: 1;
-  }
-  30% {
-    transform: scale(40) ;
-    opacity: 0;
   }
 
   100% {
-    transform: scale(140);
     opacity: 0;
   }
 }
