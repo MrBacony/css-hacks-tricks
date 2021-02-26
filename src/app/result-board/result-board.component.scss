@@ -1,11 +1,11 @@
 .trick-list-container {
   position: absolute;
   left: 55%;
-  bottom: 360px;
+  bottom: 370px;
   z-index: 1;
   background: #cccccc;
   width: 400px;
-  height: 500px;
+  height: 600px;
   transform: rotateY(
       -30deg
   ) rotateX(
@@ -25,45 +25,62 @@
   height: 400px;
   overflow: auto;
   padding-right: 13px;
-  .trick {
-    width: 100%;
+
+}
+
+.trick {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  .label {
+    flex: 1;
+  }
+
+  .number, .stackblitz, .caniuse {
+    height: 34px;
+    width: 34px;
     display: flex;
     align-items: center;
-    height: 56px;
-    .label {
-      flex: 1;
-    }
+    justify-content: center;
+    box-sizing: border-box;
+  }
 
-    .number, .stackblitz, .caniuse {
-      height: 34px;
-      width: 34px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-    }
+  .stackblitz, .caniuse {
+    cursor: pointer;
+  }
 
-    .stackblitz, .caniuse {
-      cursor: pointer;
+  .caniuse {
+    background: #C75000;
+    justify-content: flex-end;
+    padding-right: 5px;
+    margin-left: 13px;
+    position: relative;
+    text-decoration: none;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 10px;
+      background: black;
+      right: 15px;
+      bottom: 11px;
     }
+  }
+}
 
-    .caniuse {
-      background: #C75000;
-      justify-content: flex-end;
-      padding-right: 5px;
-      margin-left: 13px;
-      position: relative;
-      text-decoration: none;
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        height: 1px;
-        width: 10px;
-        background: black;
-        right: 15px;
-        bottom: 11px;
-      }
-    }
+.last {
+  width: 120%;
+  margin-left: calc(-30px - 10%);
+  padding: 10px 30px;
+  background: #fff;
+  color: #e80000;
+  border: 4px solid;
+  border-radius: 10px;
+
+  .label {
+    font-weight: bold;
+    font-size: 1.5rem;
   }
 }
